@@ -82,7 +82,8 @@ if btn:
         "specifications":specifications
     }
     # r.post("http://127.0.0.1:8000/plan_trip",json=payload)
-    be_res=r.post("http://127.0.0.1:8000/plan_trip",json=payload)
+    # be_res=r.post("http://127.0.0.1:8000/plan_trip",json=payload)
+    be_res = r.post("https://ai-travel-planner-6nq4.onrender.com/plan_trip", json=payload)
     if be_res.status_code == 200:
         st.write(be_res.json()["content"])
 
